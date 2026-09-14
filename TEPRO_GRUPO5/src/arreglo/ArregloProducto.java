@@ -22,6 +22,29 @@ public class ArregloProducto {
         }
         return null;
     }
+    public boolean eliminar(int codigo) {
+
+        Producto producto = buscar(codigo);
+
+        if (producto != null) {
+            lista.remove(producto);
+            return true;
+        }
+
+        return false;
+    }
+    public boolean modificar(int codigo, String nuevoNombre, int nuevoStock) {
+
+        Producto producto = buscar(codigo);
+
+        if (producto != null) {
+            producto.setNombre(nuevoNombre);
+            producto.setStock(nuevoStock);
+            return true;
+        }
+
+        return false;
+    }
 
     public ArrayList<Producto> obtenerTodo() {
         return lista;
