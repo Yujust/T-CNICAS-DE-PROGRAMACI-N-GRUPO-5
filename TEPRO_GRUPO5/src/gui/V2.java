@@ -219,8 +219,7 @@ public class V2 extends JFrame implements ActionListener {
 
             int codigoAleatorio = ThreadLocalRandom.current().nextInt(100, 1000);
 
-            Producto nuevo = new Producto(codigoAleatorio, nombre, 0.0, cantidad);
-            ap.adicionar(nuevo);
+            ap.adicionar(codigoAleatorio, nombre, 0.0, cantidad);
 
             JOptionPane.showMessageDialog(null, "Producto registrado correctamente.\nCódigo asignado: " + codigoAleatorio);
             

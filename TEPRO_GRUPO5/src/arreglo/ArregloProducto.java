@@ -13,6 +13,10 @@ public class ArregloProducto {
     public void adicionar(Producto p) {
         lista.add(p);
     }
+    public void adicionar(int codigo, String nombre, double precio, int stock) {
+        Producto p = new Producto(codigo, nombre, precio, stock);
+        lista.add(p);
+    }
 
     public Producto buscar(int c) {
         for (Producto p : lista) {
